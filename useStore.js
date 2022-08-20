@@ -3,8 +3,9 @@ import create from 'zustand'
 
 const useStore = create((set, get) => {
   return {
-    on: false,
-    setOn: () => set(() => ({on: true})),
+    isOn: false,
+    turnOn: () => set(() => ({isOn: true})),
+    turnOff: () => set(() => ({isOn: false})),
   }
 })
 

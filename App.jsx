@@ -3,12 +3,13 @@ import useStore from './useStore'
 
 
 export default function App() {
-  const on = useStore((state) => state.on)
-  const setOn = useStore((state) => state.setOn)
+  const isOn = useStore((state) => state.isOn)
+  const turnOn = useStore((state) => state.turnOn)
   return (
     <>
-      <h1>Hello World! is on: {on}</h1>
-      <button onClick={setOn}>turn on</button>
+      <h1>Hello World!</h1>
+      <p>is on: {isOn + ''}</p>
+      <button onClick={turnOn}>turn on</button>
     </>
   )
 }
